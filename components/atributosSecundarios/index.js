@@ -14,8 +14,8 @@ export default function AtributosSecundarios({ ficha, valoresExtras }) {
           </tr>
         </thead>
         <tbody id="pericias">
-          {fields.map((field) => (
-            <tr className={field.split('/')[1]}>
+          {fields.map((field, i) => (
+            <tr key={i} className={field.split('/')[1]}>
               <th>{field.split('/')[0]}</th>
               <td>
                 {atributos[field.split('/')[1]] +
@@ -38,8 +38,8 @@ export default function AtributosSecundarios({ ficha, valoresExtras }) {
           </tr>
         </thead>
         <tbody id="extras">
-          {fieldsExtras.map((field) => (
-            <tr>
+          {fieldsExtras.map((field, i) => (
+            <tr key={i}>
               <th>{field}</th>
               <td id={`extras=${field}`}>{valoresExtras[field]}</td>
             </tr>

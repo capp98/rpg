@@ -18,8 +18,8 @@ export default function Itens({ ficha }) {
           </tr>
         </thead>
         <tbody id="table-itens">
-          {reliquiasComAtributos.map((reliquia) => (
-            <tr>
+          {reliquiasComAtributos.map((reliquia, i) => (
+            <tr key={i}>
               <td>{reliquia.nome}</td>
               <td>
                 {Object.entries(reliquia.atributos).map(([atributo, valor]) => (
