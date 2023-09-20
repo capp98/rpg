@@ -8,11 +8,13 @@ import ordenarNome from '../utils/sort.js';
 
 export default function App() {
   const [ficha, setFicha] = useState();
-  const [personagem, setPersonagem] = useState("zenith beifong d'weller");
+  const [personagem, setPersonagem] = useState("Zenith Beifong D'weller");
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`https://anxious-puce-cloak.cyclic.cloud/chars/${personagem}`)
+    fetch(
+      `https://anxious-puce-cloak.cyclic.cloud/chars/${personagem.toLowerCase()}`
+    )
       .then((response) => response.json())
       .then((data) => {
         setFicha(data[0]);
@@ -39,17 +41,24 @@ export default function App() {
   return (
     <>
       <nav>
-        <a onClick={() => setPersonagem('lukas hysi')}>Lukas Hysi</a>
-        <a onClick={() => setPersonagem('nicole freitas')}>Nicole Freitas</a>
-        <a onClick={() => setPersonagem('rafael dewitt')}>Rafael DeWitt</a>
-        <a onClick={() => setPersonagem('violet müller bohn')}>
+        <a onClick={() => setPersonagem('Lukas Hysi')}>Lukas Hysi</a>
+        <a onClick={() => setPersonagem('Nicole Freitas')}>Nicole Freitas</a>
+        <a onClick={() => setPersonagem('Rafael DeWitt')}>Rafael DeWitt</a>
+        <a onClick={() => setPersonagem('Violet Müller Bohn')}>
           Violet Müller Bohn
         </a>
-        <a onClick={() => setPersonagem('zophise monchèrt')}>
+        <a onClick={() => setPersonagem('Zophise Monchèrt')}>
           Zophise Monchèrt
         </a>
+        <a onClick={() => setPersonagem("Zenith Beifong D'weller")}>
+          Zenith Beifong D'weller
+        </a>
       </nav>
-      <AtributosPrincipais ficha={ficha} valoresExtras={valoresTotal} />
+      <AtributosPrincipais
+        nome={personagem}
+        ficha={ficha}
+        valoresExtras={valoresTotal}
+      />
       <AtributosSecundarios ficha={ficha} valoresExtras={valoresTotal} />
       <Reliquias ficha={ficha} />
       <Itens ficha={ficha} />

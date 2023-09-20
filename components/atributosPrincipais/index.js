@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export default function AtributosPrincipais({ ficha, valoresExtras }) {
+export default function AtributosPrincipais({ nome, ficha, valoresExtras }) {
   let { atributos } = ficha;
   let dt = atributos.destreza + 10;
 
@@ -36,7 +36,7 @@ export default function AtributosPrincipais({ ficha, valoresExtras }) {
           <thead>
             <tr>
               <th colspan="3" id="nome">
-                {ficha.nome}
+                {nome}
               </th>
             </tr>
           </thead>
