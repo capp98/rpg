@@ -26,8 +26,7 @@ export default function AtributosPrincipais({ nome, ficha, valoresExtras }) {
   valoresExtras.defesa = valoresExtras.defesa ? valoresExtras.defesa : 0;
 
   let armadura = armaduraExtra + valoresExtras.defesa;
-  let resistenciaMagica =
-    resistenciaMagicaExtra + valoresExtras.defesa;
+  let resistenciaMagica = resistenciaMagicaExtra + valoresExtras.defesa;
   return (
     <div id="atributosPrincipais">
       <img id="foto" src={ficha.foto} alt={`Imagem do ${ficha.nome}`} />
