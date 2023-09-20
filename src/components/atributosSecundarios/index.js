@@ -3,8 +3,9 @@ import React, { useState } from 'react';
 export default function AtributosSecundarios({ ficha, valoresExtras }) {
   let { atributos, pericias } = ficha;
   let fields = Object.keys(pericias);
+  console.log(valoresExtras);
   let fieldsExtras = Object.keys(valoresExtras);
-
+  console.log(fieldsExtras);
   return (
     <div id="infos">
       <table>

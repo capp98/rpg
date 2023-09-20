@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import './style.css';
-import AtributosPrincipais from '../components/atributosPrincipais/index.js';
-import AtributosSecundarios from '../components/atributosSecundarios/index.js';
-import Reliquias from '../components/reliquias/index.js';
-import Itens from '../components/itens/index.js';
+import AtributosPrincipais from './components/atributosPrincipais/index.js';
+import AtributosSecundarios from './components/atributosSecundarios/index.js';
+import Reliquias from './components/reliquias/index.js';
+import Itens from './components/itens/index.js';
 import ordenarNome from './utils/sort.js';
 
 export default function App() {
@@ -22,7 +22,7 @@ export default function App() {
       });
   }, [personagem]);
 
-  if (isLoading) return <h1>Tá Carregando</h1>;
+  if (isLoading) return <h1>Carregando...</h1>;
 
   let valoresTotal = {};
   ficha.reliquias.sort(ordenarNome);
