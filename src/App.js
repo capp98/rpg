@@ -4,7 +4,7 @@ import AtributosPrincipais from '../components/atributosPrincipais/index.js';
 import AtributosSecundarios from '../components/atributosSecundarios/index.js';
 import Reliquias from '../components/reliquias/index.js';
 import Itens from '../components/itens/index.js';
-import ordenarNome from '../utils/sort.js';
+import ordenarNome from './utils/sort.js';
 
 export default function App() {
   const [ficha, setFicha] = useState();
