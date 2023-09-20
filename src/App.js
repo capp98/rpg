@@ -24,7 +24,6 @@ export default function App() {
 
   if (isLoading) return <h1>Tá Carregando</h1>;
 
-  console.log(ficha);
   let valoresTotal = {};
   ficha.reliquias.sort(ordenarNome);
 
