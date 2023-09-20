@@ -17,17 +17,17 @@ export default function AtributosPrincipais({ nome, ficha, valoresExtras }) {
     : 25;
 
   //DEFESAS
-  valoresExtras.armadura = valoresExtras.armadura ? valoresExtras.armadura : 0;
+  let armaduraExtra = valoresExtras.armadura ? valoresExtras.armadura : 0;
 
-  valoresExtras['resistência mágica'] = valoresExtras['resistência mágica']
+  let resistenciaMagicaExtra = valoresExtras['resistência mágica']
     ? valoresExtras['resistência mágica']
     : 0;
 
   valoresExtras.defesa = valoresExtras.defesa ? valoresExtras.defesa : 0;
 
-  let armadura = valoresExtras.armadura + valoresExtras.defesa;
+  let armadura = armaduraExtra + valoresExtras.defesa;
   let resistenciaMagica =
-    valoresExtras['resistência mágica'] + valoresExtras.defesa;
+    resistenciaMagicaExtra + valoresExtras.defesa;
   return (
     <div id="atributosPrincipais">
       <img id="foto" src={ficha.foto} alt={`Imagem do ${ficha.nome}`} />
