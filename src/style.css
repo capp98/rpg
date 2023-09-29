@@ -103,7 +103,6 @@ body {
 #infos {
   display: flex;
   flex: 1 1 750px;
-  /* flex: 1 1 auto; */
   gap: 0 10px;
   justify-content: space-evenly;
 }
@@ -111,7 +110,6 @@ body {
 #atributosPrincipais {
   flex: 1 1;
   text-align: center;
-  min-width: 250px;
 }
 #atributosPrincipais > img {
   max-width: 350px;
